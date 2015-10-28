@@ -7,7 +7,6 @@ public class Hazard : MonoBehaviour {
 	public Slider healthBarSlider;
 	public Text dead;
 	bool startGame;
-	int timeD;
 	// Use this for initialization
 	void Start () {
 	}
@@ -20,8 +19,7 @@ public class Hazard : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		other.gameObject.transform.position = respawnPoint.transform.position;
-		GameController.Instance.timeD += 1;
-
+			GameController.Instance.timeD += 1;
 	} 	
 
 }
